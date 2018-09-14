@@ -13,4 +13,5 @@
 			Views\Template::main();
 			Views\Template::footer();
 		}
+		// echo "string";
 ?>
