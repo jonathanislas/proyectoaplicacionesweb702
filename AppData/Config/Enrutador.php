@@ -22,12 +22,12 @@ class Enrutador
 
 			
 		}
-		if(request->getMetodo()!="modificar")
+		if($request->getMetodo()!="modificar")
 		{
-			ruta = ROOT . "Views" . DS . $request->getControlador() . DS . $request->getMetodo . ".php"
+			$ruta = ROOT . "Views" . DS . $request->getControlador() . DS . $request->getMetodo() . ".php";
 			if(is_readable($ruta))
 			{
-				require_once()
+				require_once($ruta);
 			}
 			else
 				if($request->getMetodo()== "eliminar" || $request->
@@ -43,8 +43,7 @@ class Enrutador
 				}
 		}
 		else
-			echo(json_encode(mysql_fetch_assoc($datos));
-	 }
+			echo(json_encode(mysql_fetch_assoc($datos)));
 	}
-   }
-?>}
+}
+?>
