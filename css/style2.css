@@ -1,0 +1,236 @@
+@font-face 
+{
+    font-family: 'alpha';
+    src: url('../fonts/alpha_echo-webfont.eot');
+    src: url('../fonts/alpha_echo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alpha_echo-webfont.woff') format('woff'),
+         url('../fonts/alpha_echo-webfont.ttf') format('truetype'),
+         url('../fonts/alpha_echo-webfont.svg#alpha_echoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face 
+{
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?6hhbee');
+  src:  url('../fonts/icomoon.eot?6hhbee#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?6hhbee') format('truetype'),
+    url('../fonts/icomoon.woff?6hhbee') format('woff'),
+    url('../fonts/icomoon.svg?6hhbee#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+
+body
+ {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+ }
+
+header
+ {
+    background: ##FFFF00;
+ }
+
+header nav
+ {
+    background: #424242;
+    color: WHITE;
+    padding-right: 10em;
+    padding-left: 10em;
+    text-align: right;
+ }
+
+header nav label
+ {
+    font-family: "Arial";
+    font-size: 1.2em 0;
+    float:left;
+    margin: 1.5em 0;
+    color: black;
+ }
+
+header div label
+ {
+    font-family: 'VT323-Regular',sans-serif;
+ }
+
+header div span
+{
+    font-family: 'Revalia',cursive;
+}
+
+header nav ul li
+ {
+    display: inline-block;
+    padding: 0.5em 0;
+    padding-left: 0em;
+    padding-right: 0em;
+    border-right: 0em;
+    margin: 0px;
+ }
+
+header nav ul
+ {
+    display: inline-block;
+    
+ }
+
+header nav ul li a
+ {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;   
+    font-family: "Arial";
+    padding: 1.5em 1em;
+    margin-left: -0.3em;
+ }
+
+body section
+ {
+    padding-left: 10em;
+    padding-right: 10em;
+ }
+body section h2
+ {
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-left: 14em;
+    margin-right: 14em;
+ }
+ body section button
+ {
+    
+    margin-left: 5em;
+    margin-right: 5em;
+ }
+ body section input
+ {
+    margin-left: 30em;
+    margin-right: 30em;
+    padding-left: 2em;
+    padding-right: 2em;
+    
+ }
+body div
+ {
+    padding-left: 10em;
+    padding-right: 10em;
+ }
+
+ footer
+  {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+
+  body header div
+  {
+    border-top:  2px solid #CCCCCC;
+    border-bottom: 2px solid #CCCCCC;
+    padding-bottom: 5.5em;
+    padding-top: 2em;
+
+  }
+
+  header div img
+  {
+    margin-left: 0.8em;
+    margin-right: 0.6em;
+  }
+
+  footer nav label
+ {
+    font-family: "Arial";
+    font-size: 1.2em 0;
+    float:right;
+    margin: 1.5em 0;
+ }
+
+ footer nav ul li a
+ {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;   
+    font-family: "Arial";
+    padding: 1.5em 1em;
+    margin-left: -0.3em;
+ }
+
+ footer nav ul li
+ {
+    display: inline-block;
+    padding: 0.5em 0;
+    
+ }
+
+footer nav ul
+ {
+    display: inline-block;
+
+ }
+
+footer
+ {
+    float: bottom;
+    background: #333333;
+    padding-right: 10em;
+    padding-left: 10em;
+ }
+
+footer nav
+ {
+    color: WHITE;
+    text-align: left;
+    padding-bottom: 0em;
+ }
+
+ footer div img
+  {
+    float: bottom;
+  }
+
+footer label a
+{
+    background: red;
+    color: white;
+    font-size: 3em;
+    margin-left: 1.2em;
+    padding: 0.3em;
+    text-decoration: none;
+}
+
+.alpha
+{
+  font-size: 2em;
+  font-family: "alpha",Arial,sans-serif;
+}
