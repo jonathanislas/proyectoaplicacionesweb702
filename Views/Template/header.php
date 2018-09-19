@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
 
 
-    <title>Web de calificaciones</title>
+    <title>WEB de calificaciones</title>
 
     <!-- Bootstrap core CSS -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
