@@ -10,7 +10,7 @@
 			Views\Template::header();
 			AppData\Config\Enrutador::run(new AppData\Config\Request());
 			Views\Template::nav();
-			Views\Template::main();
+			// Views\Template::main();
 			Views\Template::footer();
 		}
 		// echo "string";

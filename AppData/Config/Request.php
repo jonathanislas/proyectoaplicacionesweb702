@@ -45,7 +45,7 @@ class Request
         }
         else
         {
-            $this->controlador="inicio";
+            $this->controlador="Home";//cambio de inicio a Home
             $this->metodo = "index";
         }
     }
