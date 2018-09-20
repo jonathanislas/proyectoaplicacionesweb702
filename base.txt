@@ -1,0 +1,13 @@
+create table Sexos (idsexo int primary key, descsexo varchar(20) not null);
+
+create table TipoUsuarios (idtusuario int primary key, tudesc varchar(15) not null);
+
+create table Usuarios (idusuario int primary key, nickname varchar(7) not null unique, password varchar(20) not null, idtusuario int not null);
+
+Create table Personas (idpersona int primary key, nombre varchar(50) not null, app varchar(25) not null, apm varchar(25) not null, edad int not null, idsexo int not null, idusuario int not null);
+
+alter table Usuarios add constraint tiene foreign key (idtusuario) references TipoUsuarios (idtusuario);
+
+alter table Personas add constraint son foreign key (idsexo) references Sexos (idsexo);
+
+alter table Personas add constraint usan foreign key (idusuario) references Usuarios (idusuario);
