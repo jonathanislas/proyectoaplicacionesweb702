@@ -13,7 +13,6 @@
   </div>
   <fieldset class="form-group">
     <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
   </fieldset>
   <div class="form-group row">
     <div class="col-sm-10">
