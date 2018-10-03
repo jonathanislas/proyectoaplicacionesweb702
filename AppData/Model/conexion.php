@@ -1,5 +1,5 @@
-hp namespace AppData\Model;
-ss conexion{
+<?php namespace AppData\Model;
+class conexion{
 	private $datos=array("server"=>"localhost","user"=>"root","password"=>"", "base"=>"calificaciones");
 	private $conexion;
 	function __construct(){
@@ -20,3 +20,4 @@ ss conexion{
 
 		
 }
+?>
