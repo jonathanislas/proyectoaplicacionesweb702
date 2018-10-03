@@ -1,7 +1,7 @@
 <?php 
 namespace AppData\Controller;
 use AppData\Model\Login;
-class loginController{
+class LoginController{
 	private $login;
 	function __construct(){
 		$this->login=new Login();

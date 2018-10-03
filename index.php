@@ -2,7 +2,7 @@
 <?php
 	define('DS', DIRECTORY_SEPARATOR);
 	define('ROOT',realpath(dirname(__FILE__)).DS);
-	define('URL', "http://localhost/proyectoaplicacionesweb702/");
+	define('URL', "http://localhost/Github/proyectoaplicacionesweb702/");
 	require_once ("AppData/Config/Autoload.php");
 	\AppData\Config\Autoload::run();
 	if(!isset($_SERVER["http_X_REQUESTED_WITH"])&&(isset($_GET['url'])?!((stristr($_GET['url'],'print'))&&(stristr($_GET['url'],'pdf'))):true))
