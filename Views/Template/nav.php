@@ -18,7 +18,7 @@
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Materia
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -27,13 +27,13 @@
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Calificaciones
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Reportes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ver</a>
-          <a class="dropdown-item" href="#">Acentar</a>
-          <a class="dropdown-item" href="#">Modificar</a>
+          <a class="dropdown-item" href="#">Materiar</a>
+          <a class="dropdown-item" href="#">Grupo</a>
+          <a class="dropdown-item" href="#">Aprobacion</a>
         </div>
       </li>
       <li class="nav-item">
