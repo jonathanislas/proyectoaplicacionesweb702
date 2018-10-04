@@ -37,7 +37,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-limk" href="<?php echo URL;?>login">Login</a>
+        <a class="nav-limk" href="<?php echo URL;?>login">Inicia Sesion</a>
       </li>
      
     </ul>
