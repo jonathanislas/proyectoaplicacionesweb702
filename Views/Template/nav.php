@@ -39,6 +39,9 @@
       <li class="nav-item">
         <a class="nav-limk" href="<?php echo URL;?>login">Inicia Sesion</a>
       </li>
+       <li class="nav-item">
+        <a class="nav-limk" href="<?php echo URL; ?>login/registrar">Registrar</a>
+      </li>
      
     </ul>
   </div>

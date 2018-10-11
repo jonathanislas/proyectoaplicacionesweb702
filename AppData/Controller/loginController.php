@@ -9,7 +9,28 @@ class LoginController{
 	function index(){
 
 	}
-	function __destruct(){
+	public function logout(){
+		session_destroy();
+	}
+	
+	public function guardar(){
+		if (isset($_POST)){
+			$this->login->set("nombre",$_POST['nombre']);
+			$this->login->set("ap_p",$_POST['ap_p']);
+			$this->login->set("am_m",$_POST['am_m']);
+			$this->login->set("edad",$_POST['edad']);
+			$this->login->set("id_sexo",$_POST['id_sexo']);
+			$this->login->set("id_tipo_usuario",$_POST['id_tipo_usuario']);
+			$this->login->guardar();
+			?>
+			<script type="text/javascript">
+				window.location.href="<?php echo URL?>login";
+			</script>
+			<?php 
+		}
+	}
+	function __destruct()
+	{
 
 	}
 
@@ -30,7 +51,9 @@ class LoginController{
 	<?php
 		}
 	}
-	
 
-
+public function registrar(){
+		
 	}
+	}
+	?>

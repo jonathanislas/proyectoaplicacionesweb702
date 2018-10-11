@@ -17,4 +17,11 @@ class Login{
 		$dato=$this->conexion->QueryResultado($aql);
 		return $dato;
 	}
+	public function registrar(){
+
+	}
+	public function guardar(){
+		$sql="INSERT INTO persona(nombre, ap_p, ap_m, edad, id_sexo, id_usuario) VALUES ('{$this->nombre}','{$this->ap_p}','{$this->ap_m}','{this->sexo}','{$this->id_usuario}')";
+		$this->conexion->QuerySimple($sql);
+	}
 }

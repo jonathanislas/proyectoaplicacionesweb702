@@ -1,64 +1,35 @@
-<?php
-namespace AppData\Config;
-use AppData\Model\login;
-
-class Request
-{
-    private $controlador;
-    private $metodo;
-    private $argumento;
-    public function __construct()
-    {
-        if (isset($_SESSION["username"]))
-        {
-            if (isset($_GET['url'])) {
-                $ruta = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL);
-                $ruta = explode("/", $ruta);
-                $ruta = array_filter($ruta);
-                if ($ruta[0] == "index.php") {
-                    $this->controlador = "empleado_bienvenido";
-                } else {
-                    $this->controlador = strtolower(array_shift($ruta));
-                }
-                $this->metodo = strtolower(array_shift($ruta));
-                if (!$this->metodo)
-                    $this->metodo = "index";
-                $this->argumento = $ruta;
-            }else {
-                $this->controlador = "empleado_bienvenido";
-                $this->metodo = "index";
+<?php namespace AppData\Config;
+  class Request{
+    private $Controlador;
+    private $Metodo;
+        private $Argumento;
+        public function __construct(){
+      if(isset($_GET['url'])){
+        $ruta = filter_input(INPUT_GET,'url',FILTER_SANITIZE_URL);
+              $ruta = explode("/",$ruta); //Se empieza a crear el array utilizando explode para delimitar y dividirlo en un array
+                $ruta = array_filter($ruta);//Se crea otro filtro
+          if($ruta[0]=="index.php" || $ruta[0]=="index")
+          $this->Controlador="Login";
+              else
+                  $this->Controlador = strtolower(array_shift($ruta));
+                  $this->Metodo = strtolower(array_shift($ruta));
+                if(!$this->Metodo)
+                    $this->Metodo = "index";
+                $this->Argumento = $ruta;
             }
-      }
-      else
-          if (isset($_GET['url'])?stristr($_GET['url'],'login'):false)
-        {
-            $this->controlador="login";
-            if(isset($_POST["email"]))
-                $this->metodo = "verify";
-            else
-                $this->metodo = "index";
+            else{
+                $this->Controlador="Home";//Archivo llamado HomeController.php
+                $this->Metodo="index";
+            }
+    }
+        public function getControlador(){
+      return $this->Controlador;
         }
-        else if (isset($_GET['url'])?stristr($_GET['url'],'ReservacionesCliente'):false)
-        {
-            $this->controlador="ReservacionesCliente";
-            $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
+        public function getMetodo(){
+            return $this->Metodo;
         }
-        else
-        {
-            $this->controlador="Home";//cambio de inicio a Home
-            $this->metodo = "index";
+        public function getArgumento(){
+            return $this->Argumento;
         }
     }
-    public function getControlador()
-    {
-        return $this->controlador;
-    }
-    public function getMetodo()
-    {
-        return $this->metodo;
-    }
-    public function getArgumento()
-    {
-        return $this->argumento;
-    }
-}
+?>

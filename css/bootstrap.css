@@ -6132,9 +6132,9 @@ button.bg-danger:focus {
   background-color: #bd2130 !important;
 }
 
-.bg-light {
+/*.bg-light {
   background-color: #f8f9fa !important;
-}
+}*/
 
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
@@ -9025,6 +9025,10 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6;
+  }
+  .bg-light {
+    background-color: #1a237e;
+    
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
