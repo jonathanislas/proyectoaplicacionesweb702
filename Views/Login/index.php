@@ -1,4 +1,5 @@
 <!-- ------------------------PRUEBA DE LOGIN----------------- -->
+<br><br><br><br>
 <style type="text/css">.boton{text-align:center;}</style>
 <form>
 	<div class="row">
