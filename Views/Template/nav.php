@@ -1,3 +1,10 @@
+<style type="text/css">
+.login{
+  text-align: right;
+  color: #fff;
+}
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Calificaciones</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="<?php echo "Home"; ?>" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Calificaciones
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -36,10 +43,13 @@
           <a class="dropdown-item" href="<?php echo "raprobacion"; ?>">Aprobacion</a>
         </div>
       </li>
-      <li class="nav-item dropdown01">
-        <a class="nav-limk" href="<?php echo URL;?>login">Inicia Sesion</a>
-        <a class="nav-limk" href="<?php echo URL;?>login/registrar">Registrar</a>
-      </li>  
+       
     </ul>
+  </div>
+  <div class="login">
+     <li class="nav-item dropdown">
+        <a class="nav-limk" href="<?php echo "login"; ?>">Inicia Sesion</a>
+        <a class="nav-limk" href="<?php echo "login/registrar"; ?>">Registrar</a>
+      </li>
   </div>
 </nav>
