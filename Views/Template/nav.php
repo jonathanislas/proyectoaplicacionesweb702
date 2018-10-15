@@ -11,9 +11,9 @@
           Calificaciones
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ver</a>
-          <a class="dropdown-item" href="#">Acentar</a>
-          <a class="dropdown-item" href="#">Modificar</a>
+          <a class="dropdown-item" href="<?php echo "ver"; ?>">Ver</a>
+          <a class="dropdown-item" href="<?php echo "acentar"; ?>">Acentar</a>
+          <a class="dropdown-item" href="<?php echo "modificar"; ?>">Modificar</a>
         </div>
       </li>
 
@@ -22,7 +22,7 @@
           Materia
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Asignar</a>
+          <a class="dropdown-item" href="<?php echo "asignarmateria"; ?>">Asignar</a>
         </div>
       </li>
 
@@ -31,18 +31,15 @@
           Reportes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Materiar</a>
-          <a class="dropdown-item" href="#">Grupo</a>
-          <a class="dropdown-item" href="#">Aprobacion</a>
+          <a class="dropdown-item" href="<?php echo "rmateria"; ?>">Materiar</a>
+          <a class="dropdown-item" href="<?php echo "rgrupo"; ?>">Grupo</a>
+          <a class="dropdown-item" href="<?php echo "raprobacion"; ?>">Aprobacion</a>
         </div>
       </li>
-      <li class="nav-item">
+      <li class="nav-item dropdown01">
         <a class="nav-limk" href="<?php echo URL;?>login">Inicia Sesion</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-limk" href="<?php echo URL; ?>login/registrar">Registrar</a>
-      </li>
-     
+        <a class="nav-limk" href="<?php echo URL;?>login/registrar">Registrar</a>
+      </li>  
     </ul>
   </div>
 </nav>

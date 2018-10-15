@@ -1,3 +1,4 @@
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer  class="page-footer white-text" style="background: #F05F40">
     <div style="background: #F05F40">
       <div class="container center">
@@ -13,7 +14,8 @@
   <script>window.jQuery || document.write('<script src="../../</script>
   <script src="Public/js/bootstrap.min.js"></script>
   <script>
-  	Holder.addTheme('thumb',{
+  	Holder.addTheme('thumb',
+    {
   		bg: '#55595c',
   		fg: '#eceeef',
   		text: 'Thumbnal'
