@@ -13,10 +13,13 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="Public/js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    
+    <script src="js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
     <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
     <!-- <script type="text/javascript" src="js/popper.min.js"></script> -->
     <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 
 
  

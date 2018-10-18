@@ -1,3 +1,4 @@
+
 <form id="form-reg" class="" action="<?php echo URL ?>login/guardar" method="post">
 <div class="container" style="margin-top:5em;">
   <div class="row">
@@ -48,10 +49,10 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <select class="form-control" placeholder="tipo" name="id_tipo_usuario">
+                        <select class="form-control" placeholder="tipo" name="id_usuario">
                             <option value="1">Alumno</option>
                             <option value="2">Docente</option>
-                            <option value="3">Jefe de divicion</option>
+                            <option value="3">Jefe de divición</option>
                         </select>
                     </div>
                 </div>
@@ -61,13 +62,15 @@
                 <input type="email" name="nickname" id="nickname" class="form-control input-sm" placeholder="Email Address">
               </div>
 
-
                   <div class="form-group">
                     <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
                   </div>
-
-
-              <input type="submit" value="guardar" class="btn btn-info btn-block">
+                <script>
+                    document.querySelector(".btn").addEventListener('click', guardar(){
+                        swal("Our First Alert");
+                    });
+                </script>
+              <input type="submit" value="guardar" class="btn">
 
             </form>
           </div>

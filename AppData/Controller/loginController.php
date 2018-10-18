@@ -20,10 +20,22 @@ class LoginController{
 			$this->login->set("ap_m",$_POST['ap_m']);
 			$this->login->set("edad",$_POST['edad']);
 			$this->login->set("id_sexo",$_POST['id_sexo']);
-			$this->login->set("id_tipo_usuario",$_POST['id_tipo_usuario']);
+			$this->login->set("id_usuario",$_POST['id_usuario']);
 			$this->login->guardar();
 			?>
 			<script type="text/javascript">
+                swal({
+                    title: "Agregado Correctamente",
+                    position: "center",
+                    backdrop: "linear-gradient(green, orange)",
+                    background: "white",
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    allowEnterKey: false,
+                    showConfirmButton: false,
+                    showCancelButton: false,
+                    timer: 3000
+                });
 				window.location.href="<?php echo URL?>login";
 			</script>
 			<?php 

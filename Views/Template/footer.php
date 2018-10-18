@@ -21,3 +21,5 @@
   		text: 'Thumbnal'
   	)};
   </script>
+<script src="<?php echo URL?>js/boostrap.min.js"></script>
+<script src="<?php echo URL?>js/sweetalert.min.js" type="text/javascript"></script>

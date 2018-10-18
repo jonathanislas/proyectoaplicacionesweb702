@@ -1,6 +1,6 @@
 <?php namespace AppData\Model;
 class conexion{
-	private $datos=array("server"=>"localhost","user"=>"root","password"=>"", "base"=>"escuela");
+	private $datos=array("server"=>"localhost","user"=>"root","password"=>"root", "base"=>"escuela");
 	private $conexion;
 	function __construct(){
 		$this->conexion=new \mysqli($this->datos["server"],$this->datos["user"], $this->datos["password"],$this->datos["base"]);

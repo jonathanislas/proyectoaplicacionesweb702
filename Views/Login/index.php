@@ -2,6 +2,7 @@
 <br><br><br><br>
 <style type="text/css">.boton{text-align:center;}</style>
 <form>
+
 	<div class="row">
 		<div class="col"></div>
 		<div class="col">		
