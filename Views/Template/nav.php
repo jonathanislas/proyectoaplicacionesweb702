@@ -49,7 +49,7 @@
   <div class="login">
      <li class="nav-item dropdown">
         <a class="nav-limk" href="<?php echo "login"; ?>">Inicia Sesion</a>
-        <a class="nav-limk" href="<?php echo "login/registrar"; ?>">Registrar</a>
+        <a class="nav-limk" href="<?php echo "registrar"; ?>">Registrar</a>
       </li>
   </div>
 </nav>

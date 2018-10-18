@@ -1,10 +1,10 @@
 <?php 
 namespace AppData\Controller;
-use AppData\Model\Login;
-class LoginController{
+use AppData\Model\Registrar;
+class RegistrarController{
 	private $login;
 	function __construct(){
-		$this->login=new Login();
+		$this->registrar=new registrar();
 	}
 	function index(){
 
@@ -29,8 +29,6 @@ class LoginController{
                 swal({
                     title: "Agregado Correctamente",
                     position: "center",
-                    backdrop: "linear-gradient(green, orange)",
-                    background: "white",
                     allowOutsideClick: false,
                     allowEscapeKey: false,
                     allowEnterKey: false,

@@ -1,5 +1,4 @@
-<!-- <script src="<?php echo URL?>js/boostrap.min.js"></script> -->
-<!-- <form id="form-reg" class="" action="<?php echo URL ?>login/guardar" method="post">
+<form id="form-reg" class="" action="<?php echo URL ?>login/guardar" method="post">
 <div class="container" style="margin-top:5em;">
   <div class="row">
   <div class="col-md-4"></div>
@@ -16,24 +15,24 @@
               <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
                   <div class="form-group">
-                    <input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="nombre">
+                    <input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre">
                   </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
                   <div class="form-group">
-                    <input type="text" name="ap_p" id="ap_p" class="form-control input-sm" placeholder="apellido paterno">
+                    <input type="text" name="ap_p" id="ap_p" class="form-control input-sm" placeholder="Apellido Paterno">
                   </div>
                 </div>
               </div>
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" name="ap_m" id="ap_m" class="form-control input-sm" placeholder="apellido materno">
+                            <input type="text" name="ap_m" id="ap_m" class="form-control input-sm" placeholder="Apellido Materno" required="true">
                         </div>
                     </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <input type="text" name="edad" id="edad" class="form-control input-sm" placeholder="edad">
+                        <input type="text" name="edad" id="edad" class="form-control input-sm" placeholder="Edad">
                     </div>
                 </div>
                 </div>
@@ -59,9 +58,9 @@
                  </div>
 
               <div class="form-group">
-                <input type="email" name="nickname" id="nickname" class="form-control input-sm" placeholder="Email Address">
+                <input type="email" name="nickname" id="nickname" class="form-control input-sm" placeholder="Correo Electronico">
               </div>
-              <div class="col-xs-6 col-sm-6 col-md-6">
+              <!-- <div class="col-xs-6 col-sm-6 col-md-6"> -->
                         <div class="form-group">
                         <input type="text" name="nikname" id="nikname" class="form-control input-sm" placeholder="Nombre de Usuario">
                 </div>
@@ -74,7 +73,7 @@
                         swal("Our First Alert");
                     });
                 </script>
-              <input type="submit" value="guardar" class="btn">
+              <input type="submit" value="Guardar" class="btn">
 
             </form>
           </div>
@@ -120,11 +119,101 @@
                         {
                             required:true,
                             texto:true,
+                        },     
+                    edad:
+                        {
+                            required:true,
+                            // texto:true,
+                        },        
+                     nickname:
+                        {
+                            required:true,
+                            // email:true,
+                        }, 
+                    nikname:
+                        {
+                            required:true,
+                            // texto:true,
+                        }, 
+                    password:
+                        {
+                            required:true,
+                            // texto:true,
+                        },                                
+                },
+            messages:
+                {
+                    nombre:
+                        {
+                            required:"Nombre Obligatorio",
+                            texto:"Solo puede introducir texto"
+                        },
+                    ap_p:
+                        {
+                            required:"Apellido paterno Obligatorio",
+                            texto:"Solo puede introducir texto"
+                        },
+                    ap_m:
+                        {
+                            required:"Apellido Materno Obligatorio",
+                            texto:"Solo puede introducir texto"
+                        },
+                    edad:
+                        {
+                            required:"Edad Obligatoria",
+                            texto:"Solo puede introducir texto"
+                        },
+                    nickname:
+                        {
+                            required:"Correo Obligatorio",
+                            email:"Estrucutra de correo incorrecta"
+                        },
+                    nikname:
+                        {
+                            required:"Nombre de Usuario Obligatorio",
+                            texto:"Solo puede introducir texto"
+                        },
+                    password:
+                        {
+                            required:"Contraseña Obligatoria",
+                            texto:"Solo puede introducir texto"
+                        },
+                },
+        });
+
+    </script>
+<!-- <script type="text/javascript">
+
+        $("#Registrar").click(function()
+        {
+            $("#form-reg").submit();
+        });
+
+       
+
+        $("#form-reg").validate({
+            errorClass:"invalid",
+            rules:
+                {
+                    nombre:
+                        {
+                            required:true,
+                            texto:true,
+                        },
+                    ap_p:
+                        {
+                            required:true,
+                            texto:true,
+                        },
+                    ap_m:
+                        {
+                            required:true,
+                            texto:true,
                         },
                     edad:
                         {
                             required:true,
-                            texto:true,
+                            
                         },
                     id_sexo:
                         {
