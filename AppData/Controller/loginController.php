@@ -1,9 +1,10 @@
-<?php 
-namespace AppData\Controller;
+<?php namespace AppData\Controller;
 use AppData\Model\Login;
-class LoginController{
+class LoginController
+{
 	private $login;
-	function __construct(){
+	function __construct()
+	{
 		$this->login=new Login();
 	}
 	function index(){
@@ -51,7 +52,7 @@ class LoginController{
 	public function verify(){
 		if(isset($_POST)){
 			$this->login->set("usuario", $_POST["usuario"]);
-			$this->login->set("contraseña", $_POST["contraseña"]);
+			$this->login->set("password", $_POST["password"]);
 			$datos = $this->login->verify();
 			if (mysql_num_rows($datos)){
 				$datos=mysqli_fetch_assoc($datos);

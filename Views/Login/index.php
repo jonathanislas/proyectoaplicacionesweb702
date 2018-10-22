@@ -1,7 +1,7 @@
 <!-- ------------------------PRUEBA DE LOGIN----------------- -->
 <br><br><br><br>
 <style type="text/css">.boton{text-align:center;}</style>
-<form id="form-reg">
+<form id="form-reg" action="<?php echo URL?>Login/Verify">
 
 	<div class="row">
 		<div class="col"></div>
@@ -9,13 +9,13 @@
 		  <div class="form-group row">
 		    <label for="inputEmail3" class="col-sm-2 col-form-label">Nickname</label>
 		    <div class="col-sm-10">
-		      <input name="nic" type="text" class="form-control" id="inputEmail3" placeholder="Nickname">
+		      <input name="nikname" type="text" class="form-control" id="inputEmail3" placeholder="Nickname">
 		    </div>
 		  </div>
 		  <div class="form-group row">
 		    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
 		    <div class="col-sm-10">
-		      <input name="pass" type="password" class="form-control" id="inputPassword3" placeholder="Password">
+		      <input name="password" type="password" class="form-control" id="inputPassword3" placeholder="Password">
 		    </div>
 		  </div>
 		  <fieldset class="form-group">
@@ -48,31 +48,27 @@
             errorClass:"invalid",
             rules:
                 {
-                    nic:
+                    nikname:
                         {
                             required:true,
                             texto:true,
                         },
-                    pass:
+                    password:
                         {
                             required:true,
-                            texto:true,
+                            texto:false,
                         },
                    
                    
                 },
             messages:
                 {
-                    nic:
+                    nickname:
                         {
                             required:"Nombre obligatorio",
                             texto:"Solo puede introducir texto"
                         },
-                    pass:
-                        {
-                            required:"Apellido paterno obligatorio",
-                            texto:"Solo puede introducir texto"
-                        },
+                    
                     
                 },
         });
