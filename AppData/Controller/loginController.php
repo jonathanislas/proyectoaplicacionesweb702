@@ -51,17 +51,18 @@ class LoginController
 
 	public function verify(){
 		if(isset($_POST)){
-			$this->login->set("usuario", $_POST["usuario"]);
-			$this->login->set("password", $_POST["password"]);
+			$this->login->set("nombre", $_POST["usuario"]);
+			$this->login->set("contraseña", $_POST["password"]);
 			$datos = $this->login->verify();
-			if (mysql_num_rows($datos)){
+			if (mysqli_num_rows($datos) > 0){
 				$datos=mysqli_fetch_assoc($datos);
+				var_dump($datos);
 				$_SESSION["nombre"]=$datos["nombre"] . " " . $datos["ap_p"] . " " . $datos["ap_m"];
 			} else {
 				$_SESSION["error_login"] = "los datos no coinciden con nuesros registros";
 			}?>
-			<script type="test/javascript">
-				window.location.href = "<?php echo URL?>";
+			<script type="text/javascript">
+    			// window.location.href = "<?php echo URL?>";
 			</script>
 	<?php
 		}

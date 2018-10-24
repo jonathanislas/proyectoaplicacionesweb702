@@ -4,9 +4,11 @@
 </style>
 <table align="center" border="1" cellpadding="2" cellspacing="2" class="table">
 		<thead> 
-		<th colspan="100" rowspan="1" align="center">Materia</th>
-		<th width='100' colspan="1" rowspan="1" align="center">Unidad 1</th>
-		<th width='100' colspan="1" rowspan="1" align="center">Unidad 2</th>
-		<th width='100' colspan="1" rowspan="1" align="center">Unidad 3</th>
-		<th width='100' colspan="1" rowspan="1" align="center">Unidad 4</th></thead>	
+			<th colspan="100" rowspan="1" align="center">Materia</th>
+			<th width='100' colspan="1" rowspan="1" align="center">Unidad 1</th>
+			<th width='100' colspan="1" rowspan="1" align="center">Unidad 2</th>
+			<th width='100' colspan="1" rowspan="1" align="center">Unidad 3</th>
+			<th width='100' colspan="1" rowspan="1" align="center">Unidad 4</th>
+			<th width='100' colspan="1" rowspan="1" align="center">Promedio</th>
+		</thead>	
 </table>

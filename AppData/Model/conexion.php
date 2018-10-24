@@ -10,7 +10,7 @@ class conexion{
 		$this->conexion->query($sql) or die (mysqli_error($this->conexion));
 	}
 	public function QueryResultado($sql){
-		$this->conexion->query($sql) or die (mysqli_error($this->conexion));
+		$datos=$this->conexion->query($sql) or die (mysqli_error($this->conexion));
 		return $datos;	
 	}
 	public function __destruct()

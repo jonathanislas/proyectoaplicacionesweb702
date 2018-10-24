@@ -13,4 +13,8 @@ class Ver{
 	public function getOne(){
 
 	}
+	public function getalumnos(){
+		$sql="SELECT u.id_usuario, p.nombre, p.ap_p, p.ap_m FROM persona p,usuario u WHERE p.id_usuario=u,id_usuario AND u.id_tipo_usuario=1 ORDER by p.ap ASC";
+		$datos=$this->conexion->QueryResulrado($sql);
+	}
 }

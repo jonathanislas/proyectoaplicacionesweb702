@@ -13,7 +13,8 @@ class Login{
 	}
 	public function verify()
 	{
-		$sql="SELECT u.id_usuario, p.nombre, p.ap_p, p.ap_m, u.id_tipo_usuario FROM persona p, usuario u,sexo s, tipo_usuario tu WHERE u.nickname='{$this->usuario}' AND u.password='{$this->contraseña}' AND p.id_usuario=u.id_usuario AND u.id_tipo_usuario=tu.id_tipo_usuario AND p.id_sexo=s.id_sexo";
+		$sql="SELECT u.id_usuario, p.nombre, p.ap_p, p.ap_m, u.id_tipo_usuario FROM persona p, usuario u,sexo s, tipo_usuario tu WHERE u.nickname='{$this->nombre}' AND u.password='{$this->contraseña}' AND p.id_usuario=u.id_usuario AND u.id_tipo_usuario=tu.id_tipo_usuario AND p.id_sexo=s.id_sexo";
+		echo $sql;
 		$dato=$this->conexion->QueryResultado($sql);
 		return $dato;
 	}
