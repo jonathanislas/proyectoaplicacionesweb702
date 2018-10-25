@@ -21,6 +21,7 @@ class RegistrarController{
 			$this->login->set("edad",$_POST['edad']);
 			$this->login->set("id_sexo",$_POST['id_sexo']);
 			$this->login->set("id_usuario",$_POST['id_usuario']);
+			$this->login->set("correo",$_POST['correo']);
 			$this->login->set("nikname",$_POST['nikname']);
 			$this->login->set("password",$_POST['password']);
 			$this->login->guardar();

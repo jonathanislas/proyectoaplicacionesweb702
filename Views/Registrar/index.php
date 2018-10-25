@@ -58,7 +58,7 @@
                  </div>
 
               <div class="form-group">
-                <input type="email" name="nickname" id="nickname" class="form-control input-sm" placeholder="Correo Electronico">
+                <input type="email" name="correo" id="correo" class="form-control input-sm" placeholder="Correo Electronico">
               </div>
               <!-- <div class="col-xs-6 col-sm-6 col-md-6"> -->
                         <div class="form-group">

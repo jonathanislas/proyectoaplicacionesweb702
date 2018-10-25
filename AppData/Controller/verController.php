@@ -7,11 +7,11 @@ class verController{
 		$this->ver=new Ver();
 	}
 	function index(){
-
+$datos=$this->ver->getAlumns();
+		return $datos;
 	}
 	function ver(){
-		$datos=$this->calificaciones->getAlumns();
-		return $datos;
+		
 	}
 	function eliminar(){
 		$this->calificaciones->set("id",$id);

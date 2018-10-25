@@ -22,7 +22,7 @@ class Login{
 
 	}
 	public function guardar(){
-		$sql="INSERT INTO persona (nombre, ap_p, ap_m, edad, id_sexo, id_usuario) VALUES ('{$this->nombre}','{$this->ap_p}','{$this->ap_m}','{$this->edad}','{$this->id_sexo}','{$this->id_usuario}')";
+		$sql="INSERT INTO persona (nombre, ap_p, ap_m, edad, id_sexo, id_usuario,correo) VALUES ('{$this->nombre}','{$this->ap_p}','{$this->ap_m}','{$this->edad}','{$this->id_sexo}','{$this->id_usuario}','{$this->correo}')";
 		$this->conexion->QuerySimple($sql);
 		$sql2="INSERT INTO usuario (nickname, password, id_tipo_usuario) VALUES ('{$this->nikname}','{$this->password}','{$this->id_usuario}')";
 		$this->conexion->QuerySimple($sql2);
