@@ -7,8 +7,9 @@ class verController{
 		$this->ver=new Ver();
 	}
 	function index(){
-$datos=$this->ver->getAlumns();
+		$datos=$this->ver->getAlumns();
 		return $datos;
+
 	}
 	function ver(){
 		
