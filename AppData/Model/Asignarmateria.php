@@ -20,7 +20,21 @@ class Asignarmateria{
 		$datos=$this->conexion->QueryResultado($persona);
 		return $datos;
 
+	}
+	public function getmateria()
+	{
+		
+		$materia="SELECT id_materia, desc_materia FROM materias";
+		$datos=$this->conexion->QueryResultado($materia);
+		return $datos;
 
+	}
+	public function getgrupo()
+	{
+		
+		$grupo="SELECT id_grupo, desc_grupo FROM grupos";
+		$datos=$this->conexion->QueryResultado($grupo);
+		return $datos;
 	}
 	public function guardar()
 	{

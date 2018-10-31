@@ -1,14 +1,22 @@
 <?php 
 namespace AppData\Controller;
 use AppData\Model\Asignarmateria;
-class asignarmateriaController{
+class asignarmateriaController
+{
 	private $asignarmateria;
-	function __construct(){
+	function __construct()
+	{
 		$this->asignarmateria=new Asignarmateria();
 	}
-	function index(){
-		$datos=$this->asignarmateria->getpersona();
+	function index()
+	{
+		$datos[0]=$this->asignarmateria->getpersona();
+		
+		$datos[1]=$this->asignarmateria->getmateria();
+		
+		$datos[2]=$this->asignarmateria->getgrupo();
 		return $datos;
+		
 	}
 	public function guardar()
 	{

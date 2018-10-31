@@ -1,19 +1,39 @@
 <?php
-    if ($datos->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+    if ($datos[0]->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
                             {
                                 $persona="";
-                                while ($row = $datos->fetch_array(MYSQLI_ASSOC)) 
+                                while ($row = $datos[0]->fetch_array(MYSQLI_ASSOC)) 
                                 {
                                     $persona .=" <option value='".$row['id_persona']."'>".$row['nombre']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
                                 }
                             } 
 ?>
 
+<?php
+    if ($datos[2]->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+                            {
+                                $materia="";
+                                while ($row = $datos[1]->fetch_array(MYSQLI_ASSOC)) 
+                                {
+                                    $materia .=" <option value='".$row['id_materia']."'>".$row['desc_materia']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+                                }
+                            } 
+?>
+<?php
+    if ($datos[1]->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+                            {
+                                $grupo="";
+                                while ($row = $datos[2]->fetch_array(MYSQLI_ASSOC)) 
+                                {
+                                    $grupo .=" <option value='".$row['id_grupo']."'>".$row['desc_grupo']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+                                }
+                            } 
+?>
 <form id="form-reg" class="" action="<?php echo URL ?>asignarmateria/guardar" method="post">
-<div class="container" style="margin-top:5em;">
+<div class="container" style="margin-top:5em; margin-left: 1em; ">
   <div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4">
+  <div class="col-md-5"></div>
+  <div class="col-md-5">
     <div class="container">
       <div class="row centered-form">
       <div class="">
@@ -21,6 +41,7 @@
           <div class="panel-heading text-center">
             <h3 class="panel-title">Asignar Materia</h3>
           </div>
+          <br><br><br>
           <div class="panel-body">
             <form role="form">
                 <div class="row">
@@ -33,15 +54,25 @@
 
                     </div>
                 </div>
-                 <div class="col-xs-6 col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <input type="text" name="id_materia" id="id_materia" class="form-control input-sm" placeholder="Materia">
-                  </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <select name="id_materia"  class="form-control">
+                            <option Selected value="0" >Selecciona la materia</option>
+                            <?php echo $materia; ?>
+                       </select>
+
+                    </div>
                 </div>
-                 <div class="col-xs-6 col-sm-6 col-md-6">
-                  <div class="form-group">
-                    <input type="text" name="id_grupo" id="id_grupo" class="form-control input-sm" placeholder="Grupo">
-                  </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <select name="id_grupo"  class="form-control">
+                            <option Selected value="0" >Selecciona el grupo</option>
+                            <?php echo $grupo; ?>
+                       </select>
+
+                    </div>
                 </div>
 
                  </div>
