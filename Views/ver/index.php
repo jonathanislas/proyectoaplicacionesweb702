@@ -1,17 +1,4 @@
-<!-- <style type="text/css">
-.datagrid table { border-collapse: collapse; text-align: center; width: 100%;}
-.datagrid {font: normal 12px/100% Verdana, Arial, Helvetica, sans-serif; background: ; overflow: hidden; border: 2px solid #000; width: 100%; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: }
-</style> -->
-<!-- <table align="center" border="1" cellpadding="2" cellspacing="2" class="table">
-		<thead> 
-			<th colspan="100" rowspan="1" align="center">Materia</th>
-			<th width='100' colspan="1" rowspan="1" align="center">Unidad 1</th>
-			<th width='100' colspan="1" rowspan="1" align="center">Unidad 2</th>
-			<th width='100' colspan="1" rowspan="1" align="center">Unidad 3</th>
-			<th width='100' colspan="1" rowspan="1" align="center">Unidad 4</th>
-			<th width='100' colspan="1" rowspan="1" align="center">Promedio</th>
-		</thead>	
-</table> -->
+
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
@@ -19,12 +6,13 @@
       <th scope="col">Alumno</th>
       <th scope="col"></th>
       <th scope="col"></th>
-      <th scope="col">Unidad I</th>
+      <!-- <th scope="col">Unidad I</th>
       <th scope="col">Unidad II</th>
       <th scope="col">Unidad III</th>
       <th scope="col">Unidad IV</th>
-      <th scope="col">Promedio</th>
-      <th scope="col"></th>
+      <th scope="col">Promedio</th> -->
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
     </tr>
   </thead>
   <tbody>
@@ -37,15 +25,62 @@
                     <td><?php echo $row[2]?></td>
                     <td><?php echo $row[3]?></td>
                     <td><?php echo $row[1]?></td>
+                    <!-- <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td></td> -->
+                    <th scope="col"><button class="btn btn-success editar" id="<?php echo $fila['id_usuario'] ?>">Editar</button> </th>          
                     <td><a clas="" style="color: red" href="#">Eliminar</a></td>          
                 </tr>
         <?php
             }
         ?>
+        
   </tbody>
 </table>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Editando</h4>
+        <button type="button" class="close" data-dismiss="modal">&times</button>
+      </div>
+      <div class="modal-body">
+        <form class="form-signin" action="" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="nombre" nombre="nombre"></input>
+            <label for="nombre">Nombre</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="app" nombre="ap_p"></input>
+            <label for="nombre">Apellido Paterno</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="apm" nombre="ap_m"></imput>
+            <label for="nombre">Apellido Materno</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-succes" data-dismiss="modal">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".editar").click(function(){
+      var id=$(this).attr('id');
+      $.post("<?php echo URL ?>Calificaciones/get/"+id,{},function(data){
+        if(data){
+          data=JSON.parse(data)
+          $("#nombre").val(data['nombre'])
+          $("#app").val(data['ap_p'])
+          $("#apm").val(data['ap_m'])
+          $("#myModal").modal('show');
+        }
+      })
+    })
+  })
+</script>
