@@ -16,7 +16,7 @@ class Asignarmateria{
 	}
 	public function getpersona()
 	{
-		$persona="SELECT id_persona, nombre FROM persona";
+		$persona="SELECT id_persona, nombre, ap_p, ap_m FROM persona";
 		$datos=$this->conexion->QueryResultado($persona);
 		return $datos;
 

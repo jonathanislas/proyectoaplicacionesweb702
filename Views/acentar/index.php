@@ -19,7 +19,17 @@
                                 }
                             } 
 ?>
-<form id="form-reg" class="" action="<?php echo URL ?>asignarmateria/guardar" method="post">
+<?php
+    if ($datos[3]->num_rows > 0) //si la variable tiene al menos 1 fila entonces seguimos con el codigo
+                            {
+                                $acentarunidad="";
+                                while ($row = $datos[3]->fetch_array(MYSQLI_ASSOC)) 
+                                {
+                                    $acentarunidad .=" <option value='".$row['id_unidad']."'>".$row['desc_unidad']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+                                }
+                            } 
+?>
+<form id="form-reg" class="" action="<?php echo URL ?>acentar/guardar" method="post">
 <div class="container" style="margin-top:5em;">
   <div class="row">
   <div class="col-md-4"></div>
@@ -33,28 +43,26 @@
           </div>
           <div class="panel-body">
             <form role="form">
+                 <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="form-group">
+                    <input type="text" name="calificacion" id="calificacion" class="form-control input-sm" placeholder="Calificacion" required="true">
+                  </div>
+                
+                 </div>
                 <!-- <div class="row"> -->                
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <select name="acentarmateria"  class="form-control">
+                        <select name="id_materia"  class="form-control">
                             <option Selected value="0" >Materia</option>
                             <?php echo $acentarmateria; ?>
                        </select>
 
                     </div>
                 </div>
+                
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <select name="acentargrupo"  class="form-control">
-                            <option Selected value="0" >Grupo</option>
-                            <?php echo $persona; ?>
-                       </select>
-
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <select name="acentarpersona"  class="form-control">
+                        <select name="id_persona"  class="form-control">
                             <option Selected value="0" >Alumno</option>
                             <?php echo $acentarpersona; ?>
                        </select>
@@ -63,20 +71,14 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <select name="acentarunidad"  class="form-control">
+                        <select name="id_unidad"  class="form-control">
                             <option Selected value="0" >Unidad</option>
-                            <?php echo $persona; ?>
+                            <?php echo $acentarunidad; ?>
                        </select>
 
                     </div>
                 </div>
-                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                    <input type="text" name="Calificacion" id="Calificacion" class="form-control input-sm" placeholder="Calificacion" required="true">
-                  </div>
                 
-
-                 </div>
               <input type="submit" value="Acentar Calificacion" class="btn">
 
             </form>

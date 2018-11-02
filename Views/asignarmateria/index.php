@@ -4,7 +4,7 @@
                                 $persona="";
                                 while ($row = $datos[0]->fetch_array(MYSQLI_ASSOC)) 
                                 {
-                                    $persona .=" <option value='".$row['id_persona']."'>".$row['nombre']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+                                    $persona .=" <option value='".$row['id_persona']."'>".$row['nombre']." ".$row['ap_p']." ".$row['ap_m']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
                                 }
                             } 
 ?>

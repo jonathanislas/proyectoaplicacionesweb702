@@ -9,16 +9,32 @@ class acentarController{
 	function index(){
 		$datos[0]=$this->acentar->getacentarpersona();
 		$datos[1]=$this->acentar->getacentarmateria();
+		$datos[2]=$this->acentar->getacentargrupo();
+		$datos[3]=$this->acentar->getacentarunidad();
 		return $datos;
 	}
 	public function guardar()
 	{
 		if (isset($_POST))
 		{
-			$this->acentar->set("id_persona",$_POST['acentarperosona']);
-			$this->acentar->set("id_materia",$_POST['acentarmateria']);
+			$this->acentar->set("calificacion",$_POST['calificacion']);
+			$this->acentar->set("id_persona",$_POST['id_persona']);
+			$this->acentar->set("id_materia",$_POST['id_materia']);
+			$this->acentar->set("id_unidad",$_POST['id_unidad']);
+			$this->acentar->guardar();
 			?>
+
 			<script type="text/javascript">
+			swal({
+                    title: "Califiacacion Agregada Correctamente",
+                    position: "center",
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    allowEnterKey: false,
+                    showConfirmButton: false,
+                    showCancelButton: false,
+                    timer: 3000
+                });
 				window.location.href="<?php echo URL?>acentar";
 			</script>
 			<?php 

@@ -6,13 +6,13 @@
       <th scope="col">Alumno</th>
       <th scope="col"></th>
       <th scope="col"></th>
-      <!-- <th scope="col">Unidad I</th>
-      <th scope="col">Unidad II</th>
-      <th scope="col">Unidad III</th>
-      <th scope="col">Unidad IV</th>
-      <th scope="col">Promedio</th> -->
-      <th scope="col">Editar</th>
+       <th scope="col">Editar</th>
       <th scope="col">Eliminar</th>
+      <th scope="col">Unidad I</th>
+      <th scope="col">Unidad II</th>
+      <th scope="col">Unidad III</th> 
+      <th scope="col">Unidad IV</th>
+      <th scope="col">Unidad V</th>
     </tr>
   </thead>
   <tbody>
