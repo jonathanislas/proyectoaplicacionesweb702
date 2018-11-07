@@ -1,26 +1,19 @@
-<div class="container">
-  <!-- <?php
+<div class="container"><!-- <?php
     // if(mysqli_num_rows($datos)>0){
   ?> -->
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
-      	<h3 align="center" style="color: ##563d7c">Aplicaciones web(alumnos)</h3>
+        <h3 align="center" style="color: ##563d7c">Aplicaciones web</h3>
         <th scope="col">Alumno</th>
         <th scope="col"></th>
         <th scope="col"></th>
-         <!-- <th scope="col">Editar</th>
-        <th scope="col">Eliminar</th> -->
-        <th scope="col">Unidad I</th>
-        <th scope="col">Unidad II</th>
-        <th scope="col">Unidad III</th> 
-        <th scope="col">Unidad IV</th>
-        <th scope="col">Unidad V</th>
-        <th scope="col">Promedio</th>
+         <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody>
-    	 <?php
+       <?php
               while ($fila=mysqli_fetch_assoc($datos))
               {
           ?>
@@ -37,9 +30,9 @@
                       <td></td>
                       <td></td>
                       <td></td> -->
-                      <!-- <th scope="col"><button class="btn btn-success editar" id="<?php echo $fila['id_usuario'] ?>">Editar</button> </th>          
-                      <th scope="col"><a class="btn btn-danger" href="<?php echo URL ?>Calificaciones/eliminar/<?php echo $fila['id_usuario'] ?>">Eliminar</button> </th>
-                       --><!-- <td><a clas="" style="color: red" href="#">Eliminar</a></td>           -->
+                      <th scope="col"><button class="btn btn-success editar" id="<?php echo $fila['id_usuario'] ?>">Editar</button> </th>          
+                      <th scope="col"><a class="btn btn-danger" href="<?php echo URL ?>mostrar/eliminar/<?php echo $fila['id_usuario'] ?>">Eliminar</button> </th>
+                      <!-- <td><a clas="" style="color: red" href="#">Eliminar</a></td>           -->
                   </tr>
           <?php
               }
