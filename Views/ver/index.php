@@ -44,26 +44,17 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Editando</h4>
-        <button type="button" class="close" data-dismiss="modal">&times</button>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body contenido">
         <form class="form-signin" action="" method="post">
-          <div class="form-group">
-            <input type="text" class="form-control" id="nombre" nombre="nombre"></input>
-            <label for="nombre">Nombre</label>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="app" nombre="ap_p"></input>
-            <label for="nombre">Apellido Paterno</label>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="apm" nombre="ap_m"></imput>
-            <label for="nombre">Apellido Materno</label>
-          </div>
+          <input type="text" class="form-control" id="nombre"></input>
+          <input type="text" class="form-control" id="app"></input>
+          <input type="text" class="form-control" id="apm"></input>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-succes" data-dismiss="modal">Actualizar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
       </div>
     </div>
   </div>
@@ -72,7 +63,7 @@
   $(document).ready(function(){
     $(".editar").click(function(){
       var id=$(this).attr('id');
-      $.post("<?php echo URL ?>Calificaciones/get/"+id,{},function(data){
+      $.post("<?php echo URL ?>ver/get/"+id,{},function(data){
         if(data){
           data=JSON.parse(data)
           $("#nombre").val(data['nombre'])

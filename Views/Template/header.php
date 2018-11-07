@@ -8,17 +8,20 @@
    
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo URL ?>css/bootstrap.min.css" rel="stylesheet">
            
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="Public/js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="<?php echo URL ?>js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo URL ?>Public/js/popper.min.js"></script>
+    <script type="text/javascript" src="<?php echo URL ?>js/bootstrap.js"></script>
     <script src="js/sweetalert2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <script type="text/javascript" src="<?php echo URL ?>js/jquery.validate.min.js"></script>
+    <script src="<?php echo URL ?>js/modal.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="<?php echo URL ?>css/sweetalert2.min.css">
+
     <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
     <!-- <script type="text/javascript" src="js/popper.min.js"></script> -->
-    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="<?php echo URL ?>js/bootstrap.bundle.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 
