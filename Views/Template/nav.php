@@ -1,9 +1,21 @@
 <style type="text/css">
 .login{
   text-align: right;
-  color: #fff;
+  color: #000;
 }
 </style>
+<script type="text/javascript">
+  $(function() {
+    $(".nav > li ").click(function() 
+    {
+  
+  $(this).closest('.nav').find('li').removeClass('active');
+          $(this).addClass("active").css('background-color', 'red');
+      });
+});
+
+</script>
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Calificaciones</a>
@@ -11,8 +23,11 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto" >
+    <nav class="nav">
+      
+    
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="<?php echo "Home"; ?>" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Calificaciones
@@ -44,6 +59,7 @@
           </li>
         
     </ul>
+    </nav>
   </div>
   <div class="login">
      <li class="nav-item dropdown">
@@ -52,6 +68,7 @@
       </li>
   </div>
 </nav>
+
 
 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Calificaciones</a>
