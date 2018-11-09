@@ -1,3 +1,4 @@
+
 <div class="container">
   <!-- <?php
     // if(mysqli_num_rows($datos)>0){
@@ -6,6 +7,9 @@
     <thead class="thead-dark">
       <tr>
       	<h3 align="center" style="color: ##563d7c">Aplicaciones web(alumnos)</h3>
+        <script type="text/javascript">
+        document.querySelector("h3").style.backgroundColor = "red";
+        </script>
         <th scope="col">Alumno</th>
         <th scope="col"></th>
         <th scope="col"></th>
@@ -24,6 +28,7 @@
               while ($fila=mysqli_fetch_assoc($datos))
               {
           ?>
+
                   <tr>
                       <td scope="col"><?php echo $fila['ap_p']." ".$fila['ap_m']." ".$fila['nombre'] ?></td>
                       <td scope="col"></td>
@@ -41,7 +46,7 @@
                       <th scope="col"><a class="btn btn-danger" href="<?php echo URL ?>Calificaciones/eliminar/<?php echo $fila['id_usuario'] ?>">Eliminar</button> </th>
                        --><!-- <td><a clas="" style="color: red" href="#">Eliminar</a></td>           -->
                   </tr>
-          <?php
+         <?php
               }
           ?>
           
@@ -113,4 +118,15 @@
       })
     })
   })
+</script>
+<script type="text/javascript">
+  $('tr').click(function(){
+    var datos="";
+    $(this).find('td').each(function()
+    {
+      datos+=$(this).html()+" ";
+    })
+    alert(datos);
+  })
+  
 </script>
