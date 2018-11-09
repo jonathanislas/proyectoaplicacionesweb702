@@ -21,13 +21,14 @@
 				if(!isset($argumento))
 				{
 					$datos=call_user_func(array($controlador,$metodo));
+					// $dato=call_user_func(array($controlador,$metodo));
 					//print_r($datos);
 				}
 				else
 				{
 					if(is_callable(array($controlador,$metodo)))
 						$datos=call_user_func_array(array($controlador,$metodo),$argumento);
-					//print_r($datos);
+						// $dato=call_user_func_array(array($controlador,$metodo),$argumento);					//print_r($datos);
 				}
 			}
 			$ruta=ROOT."Views".DS.$request->getControlador().DS.$request->getMetodo().".php";

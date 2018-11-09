@@ -21,6 +21,7 @@
             <a class="dropdown-item" href="<?php echo "ver"; ?>">Ver</a>
             <a class="dropdown-item" href="<?php echo "mostrar"; ?>">Mostrar</a>
             <a class="dropdown-item" href="<?php echo "acentar"; ?>">Acentar</a>
+            <!-- <a class="dropdown-item" href="<?php echo "acentar/acentar"; ?>">Acentar P2</a> -->
             <a class="dropdown-item" href="<?php echo "modificar"; ?>">Modificar</a>
           </div>
         </li>

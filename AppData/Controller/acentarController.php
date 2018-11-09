@@ -7,10 +7,12 @@ class acentarController{
 		$this->acentar=new Acentar();
 	}
 	function index(){
-		$datos[0]=$this->acentar->getacentarpersona();
+		// $datos[0]=$this->acentar->getacentarpersona();
 		$datos[1]=$this->acentar->getacentarmateria();
 		$datos[2]=$this->acentar->getacentargrupo();
 		$datos[3]=$this->acentar->getacentarunidad();
+		$datos[4]=$this->acentar->getacentarsemestre();
+		$datos[5]=$this->acentar->getAlumns();
 		return $datos;
 	}
 	public function guardar()
