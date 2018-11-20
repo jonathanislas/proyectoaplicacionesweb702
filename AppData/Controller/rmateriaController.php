@@ -7,7 +7,14 @@ class rmateriaController{
 		$this->rmateria=new Rmateria();
 	}
 	function index(){
-
+		$datos=$this->rmateria->getAlumns();
+		return $datos;
+	}
+	function printmateria(){
+		$datos=$this->rmateria->getAlumns();
+		// $datos[1]=$this->rmateria->getcali();
+		return $datos;
+		
 	}
 	function __destruct(){
 

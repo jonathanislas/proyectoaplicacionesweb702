@@ -4,7 +4,7 @@
                                 $modificarpersona="";
                                 while ($row = $datos[0]->fetch_array(MYSQLI_ASSOC)) 
                                 {
-                                    $modificarpersona .=" <option value='".$row['id_persona']."'>".$row['ap_p']." ".$row['ap_m']." ".$row['nombre']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
+                                    $modificarpersona .=" <option value='".$row['id_usuario']."'>".$row['ap_p']." ".$row['ap_m']." ".$row['nombre']."</option>"; //concatenamos el los options para luego ser insertado en el HTML
                                 }
 
                             } 
@@ -39,7 +39,7 @@
       <div class="">
         <div class="panel panel-default">
           <div class="panel-heading text-center">
-            <h3 class="panel-title">Modificar Calificacion</h3>
+            <h3 class="panel-title"><i><b>Modificar Calificacion</b></i></h3><br>
           </div>
           <div class="panel-body">
             <form role="form">                 

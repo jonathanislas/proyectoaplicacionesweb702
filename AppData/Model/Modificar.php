@@ -13,7 +13,8 @@ class Modificar{
 	}
 	public function getmodificarpersona()
 	{
-		$modificarpersona="SELECT p.id_persona, p.nombre, p.ap_p, p.ap_m FROM persona p ORDER BY p.ap_p ASC";
+		$modificarpersona="SELECT u.id_usuario, p.nombre, p.ap_p, p.ap_m FROM persona p, usuario u WHERE p.id_persona=u.id_usuario AND u.id_tipo_usuario=1 ORDER BY p.ap_p ASC";
+
 		$datos=$this->conexion->QueryResultado($modificarpersona);
 		return $datos;
 	}

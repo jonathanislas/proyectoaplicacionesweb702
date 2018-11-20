@@ -1,4 +1,4 @@
-
+<div class="row"></div>
 <div class="container">
   <!-- <?php
     // if(mysqli_num_rows($datos)>0){
@@ -6,10 +6,7 @@
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
-      	<h3 align="center" style="color: ##563d7c">Aplicaciones web(alumnos)</h3>
-        <script type="text/javascript">
-        document.querySelector("h3").style.backgroundColor = "red";
-        </script>
+      	<br><h3 align="" style="color: ##563d7c"><i><b>Aplicaciones Web</b></i></h3><br>
         <th scope="col">Alumno</th>
         <th scope="col"></th>
         <th scope="col"></th>
@@ -33,6 +30,7 @@
                       <td scope="col"><?php echo $fila['ap_p']." ".$fila['ap_m']." ".$fila['nombre'] ?></td>
                       <td scope="col"></td>
                       <td scope="col"></td>
+                      <td scope="col"><?php echo $fila['calificacion'] ?></td>
                       <!-- <td><?php echo $row[0]?></td> -->
                       <!-- <td><?php echo $row[2]?></td>
                       <td><?php echo $row[3]?></td>

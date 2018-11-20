@@ -4,7 +4,7 @@
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
-        <h3 align="center" style="color: ##563d7c">Aplicaciones web</h3>
+        <br><h3 style="color: ##563d7c"><i><b>Alumnos</b></i></h3><br>
         <th scope="col">Alumno</th>
         <th scope="col"></th>
         <th scope="col"></th>
@@ -91,7 +91,7 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   $(document).ready(function(){
     $(".editar").click(function(){
       var id=$(this).attr('id');
@@ -104,6 +104,14 @@
           $("#myModal").modal('show');
         }
       })
+    })
+  })
+</script> -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".editar").click(function(){
+    // window.open("<?php echo URL?>rmateria/printmateria");
+    window.location.href="<?php echo URL?>mostrar/editar";    
     })
   })
 </script>
