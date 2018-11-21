@@ -19,7 +19,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo URL?>ver">Ver</a>
-            <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar</a>
+            <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a>
+            <a class="dropdown-item" href="<?php echo URL?>docente">Mostrar Docentes</a>
             <a class="dropdown-item" href="<?php echo URL?>acentar">Acentar</a>
             <a class="dropdown-item" href="<?php echo URL?>modificar">Modificar</i></a>
           </div>

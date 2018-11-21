@@ -22,7 +22,7 @@ class Rmateria{
 		return $datos;
 	}
 	public function getcali(){
-		$sql="SELECT c.calificacion FROM calificaciones c, persona p WHERE p.id_persona=c.id_persona";
+		// $sql="SELECT c.calificacion FROM calificaciones c, persona p WHERE p.id_persona=c.id_persona ";
 		// $sql="SELECT u.id_usuario, p.nombre, p.ap_p, p.ap_m FROM persona p, usuario u WHERE p.id_usuario=u.id_usuario AND u.id_tipo_usuario=1 ORDER by p.ap_p ASC";
 		// echo $sql;
 		$datos=$this->conexion->QueryResultado($sql);

@@ -31,6 +31,11 @@
                       <td scope="col"></td>
                       <td scope="col"></td>
                       <td scope="col"><?php echo $fila['calificacion'] ?></td>
+                      <td scope="col"></td>
+                      <td scope="col"></td>
+                      <td scope="col"></td>
+                      <td scope="col"></td>
+                      <td scope="col"></td>
                       <!-- <td><?php echo $row[0]?></td> -->
                       <!-- <td><?php echo $row[2]?></td>
                       <td><?php echo $row[3]?></td>
