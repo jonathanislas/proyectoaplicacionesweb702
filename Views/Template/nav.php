@@ -39,7 +39,7 @@ session_start();
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo URL?>ver">Ver</a>
-            <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar</a>
+            
           </div>
         </li>
 </form>
@@ -58,7 +58,6 @@ echo $_SESSION['nombre'];
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a>
-            <a class="dropdown-item" href="<?php echo URL?>docente">Mostrar Docentes</a>
             <a class="dropdown-item" href="<?php echo URL?>acentar">Acentar</a>
             <a class="dropdown-item" href="<?php echo URL?>modificar">Modificar</i></a>
           </div>
@@ -75,6 +74,16 @@ echo $_SESSION['nombre'];
 
 <form id="jefe">
 
+<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="<?php echo URL?>Login" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i>Calificaciones
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+            <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar</a>
+          </div>
+        </li>
+
  <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              <i> Materia
@@ -83,6 +92,16 @@ echo $_SESSION['nombre'];
               <a class="dropdown-item" href="<?php echo URL?>asignarmateria">Asignar</i></a>
             </div>
           </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="<?php echo URL?>Login" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i>Calificaciones
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a>
+            <a class="dropdown-item" href="<?php echo URL?>docente">Mostrar Docentes</a>
+          </div>
+        </li>
   <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i>Reportes

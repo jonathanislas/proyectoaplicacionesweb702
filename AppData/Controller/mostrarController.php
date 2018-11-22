@@ -12,6 +12,8 @@ class mostrarController{
 
 	}
 	function ver(){
+		$datos=$this->mostrar->getAlumns();
+			return $datos;
 		
 	}
 	function eliminar($id){
@@ -39,15 +41,17 @@ class mostrarController{
 			$datos=mysqli_fetch_assoc($datos);
 		}
 		echo json_encode($datos);
-
-		// $this->calificaciones->set("id",$id);
-		// $this->calificaciones->delete();
-		
-		// <script type="text/javascript"> -->
-			
-		 // </script> -->
 		
 	}
+
+	function edit(){
+			$data=$_POST['arreglo'];
+			$this->calificaciones->set("id",$data[0]['value']);
+			$this->calificaciones->set("nombre",$data[1]['value']);
+			$this->calificaciones->set("ap_p",$data[2]['value']);
+			$this->calificaciones->set("ap_m",$data[3]['value']);
+			$this->calificaciones->updatePer();
+		}
 	function __destruct(){
 
 	}
