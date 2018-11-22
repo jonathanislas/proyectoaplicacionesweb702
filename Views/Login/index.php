@@ -15,7 +15,7 @@
 		  <div class="form-group row">
 		    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
 		    <div class="col-sm-10">
-		      <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+		      <input name="contraseña" type="password" class="form-control" id="contraseña" placeholder="Password">
 		    </div>
 		  </div>
 		  <fieldset class="form-group">

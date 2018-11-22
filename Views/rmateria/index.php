@@ -39,7 +39,7 @@
                       <td scope="col"></td>
                       <td scope="col"></td>
                       <td scope="col"><?php echo $fila['calificacion'] ?></td>
-                      
+                     
                       
                             
                   </tr>

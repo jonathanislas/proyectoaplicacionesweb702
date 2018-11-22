@@ -42,6 +42,8 @@ class acentarController{
 			<?php 
 		}
 	}
+
+	
 	function __destruct(){
 
 	}

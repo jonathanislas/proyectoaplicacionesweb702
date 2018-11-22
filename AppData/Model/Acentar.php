@@ -58,8 +58,11 @@ class Acentar{
 	}
 		public function guardar()
 	{
-		$sql="INSERT INTO calificaciones (calificacion, id_materia, id_persona, id_unidad) VALUES ('{$this->calificacion}','{$this->id_materia}','{$this->id_persona}','{$this->id_unidad}')";
+
+		 $sql="UPDATE calificaciones SET calificacion = $this->calificacion WHERE id_materia='$this->id_materia' and id_persona='$this->id_persona' and id_unidad='$this->id_unidad'";
+		
 		$this->conexion->QuerySimple($sql);
 		
 	}
+
 }

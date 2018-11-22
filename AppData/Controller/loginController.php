@@ -48,26 +48,85 @@ class LoginController
 
 	}
 
-	public function verify(){
-		if(isset($_POST)){
-			$this->login->set("nombre", $_POST["usuario"]);
-			$this->login->set("contraseña", $_POST["password"]);
-			$datos = $this->login->verify();
-			if (mysqli_num_rows($datos) > 0){
-				$datos=mysqli_fetch_assoc($datos);
-				var_dump($datos);
-				$_SESSION["nombre"]=$datos["nombre"] . " " . $datos["ap_p"] . " " . $datos["ap_m"];
-			} else {
-				$_SESSION["error_login"] = "los datos no coinciden con nuesros registros";
-			}?>
-			<script type="text/javascript">
-    			// window.location.href = "<?php echo URL?>";
-			</script>
-	<?php
-		}
+	public function verify()
+	{
+		if(isset($_POST))
+    		{
+        	$this->login->set("usuario",$_POST["usuario"]);
+    			$this->login->set("contraseña",$_POST["contraseña"]);
+
+    			$datos=$this->login->verify();
+
+    			if(mysqli_num_rows($datos)>0)
+    			{
+    				$datos=mysqli_fetch_assoc($datos);
+    				if ($datos['id_tipo_usuario']== 1)
+    					{
+    						$_SESSION["id_usuario"]=$datos["id_usuario"];
+    						$_SESSION["nombre"]=$datos["nombre"]." ".$datos["ap_p"]." ".$datos["ap_m"];
+    						$_SESSION["id_tipo_usuario"]=$datos["id_tipo_usuario"];
+    						?>
+    						<script type="text/javascript">
+    							window.location="<?php echo URL.'Home'?>";
+    						</script>
+    						<?php
+    					}
+    					else if ($datos['id_tipo_usuario']== 2)
+    					{
+    						$_SESSION["id_usuario"]=$datos["id_usuario"];
+    						$_SESSION["nombre"]=$datos["nombre"]." ".$datos["ap_p"]." ".$datos["ap_m"];
+    						$_SESSION["id_tipo_usuario"]=$datos["id_tipo_usuario"];
+
+    						?>
+    						<script type="text/javascript">
+    							window.location="<?php echo URL.'Home'?>";
+    						</script>
+    						<?php
+    					}
+    					else if ($datos['id_tipo_usuario']== 3)
+    					{
+    						$_SESSION["id_usuario"]=$datos["id_usuario"];
+    						$_SESSION["nombre"]=$datos["nombre"]." ".$datos["ap_p"]." ".$datos["ap_m"];
+    						$_SESSION["id_tipo_usuario"]=$datos["id_tipo_usuario"];
+
+    						?>
+    						<script type="text/javascript">
+    							window.location="<?php echo URL.'Home'?>";
+    						</script>
+    						<?php
+    					}
+    			}
+    			else
+    				{
+    					?>
+    						<script type="text/javascript">
+
+                $(document).ready(function(){
+                  swal({
+                    title: "Usuario no registrado",
+                    text: "Intende de nuevo",
+                    type: "warning",
+                    closeOnConfirm: false,
+                    closeOnCancel: true,
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                  },
+                  function(isConfirm){
+                    if(isConfirm)
+                    window.location.href = "<?php echo URL ?>login";
+                  }
+                );
+                })
+    					//alert("usuario no registrado");window.location.href="<?php echo URL.'Login' ?>";
+    						</script>
+    					<?php
+    				}
+
+    		}
 	}
 
-public function registrar(){
+public function registrar()
+{
 		
 	}
 	}

@@ -39,6 +39,7 @@
                                 }
                             } 
 ?>
+<form id="form-reg" class="" action="<?php echo URL ?>acentar/guardar" method="post">
 <div class="container">
   <div class="row">
     <div class="col-">
@@ -65,8 +66,14 @@
         <?php echo $acentarunidad; ?>
       </select>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+       <div class="form-group align center">
+         <input type="submit" value="Buscar" class="btn btn-success">
+       </div>
+    </div>
   </div>
 </div>
+ </form>
 <div class="container">
 <!-- <?php
     // if(mysqli_num_rows($datos)>0){
