@@ -27,16 +27,22 @@ class RegistrarController{
 			$this->login->guardar();
 			?>
 			<script type="text/javascript">
+				<script type="text/javascript">
                 swal({
-                    title: "Agregado Correctamente",
-                    position: "center",
-                    allowOutsideClick: false,
-                    allowEscapeKey: false,
-                    allowEnterKey: false,
-                    showConfirmButton: false,
-                    showCancelButton: false,
-                    timer: 3000
-                });
+					title: " ",
+					text: "Editado correctamente",
+					timer: 2000
+				});
+                // swal({
+                //     title: "Agregado Correctamente",
+                //     position: "center",
+                //     allowOutsideClick: false,
+                //     allowEscapeKey: false,
+                //     allowEnterKey: false,
+                //     showConfirmButton: false,
+                //     showCancelButton: false,
+                //     timer: 3000
+                // });
 				window.location.href="<?php echo URL?>login";
 			</script>
 			<?php 

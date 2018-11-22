@@ -34,6 +34,7 @@ session_start();
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo URL?>ver">Ver</a>
+<<<<<<< HEAD
             <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar</a>
           </div>
         </li>
@@ -52,6 +53,10 @@ echo $_SESSION['nombre'];
             <i>Calificaciones
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+=======
+            <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a>
+            <a class="dropdown-item" href="<?php echo URL?>docente">Mostrar Docentes</a>
+>>>>>>> fb1227da0f6c9420e06e4f458d6cb7aa28c95b3f
             <a class="dropdown-item" href="<?php echo URL?>acentar">Acentar</a>
             <a class="dropdown-item" href="<?php echo URL?>modificar">Modificar</i></a>
           </div>

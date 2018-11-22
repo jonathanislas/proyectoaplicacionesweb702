@@ -18,7 +18,7 @@
                 $this->Argumento = $ruta;
             }
             else{
-                $this->Controlador="Home";//Archivo llamado HomeController.php
+                $this->Controlador="Login";//Archivo llamado HomeController.php
                 $this->Metodo="index";
             }
     }

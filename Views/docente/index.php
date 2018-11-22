@@ -1,57 +1,40 @@
-<div class="container">
-  <div class="row">
-    <div class="col-">
-      <br><h3 align="center" style="color: ##563d7c"><i><b>Aplicaciones Web</b></i></h3><br>
-    </div>
-    <div class="col-"></div>
-    <div class="col-">
-      <br><button type="button" class="btn btn-info pdf"><i><b>Generar PDF</b></i></button>
-    </div>
-  </div>
-  <!-- <?php
+<div class="container"><!-- <?php
     // if(mysqli_num_rows($datos)>0){
   ?> -->
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
-      	
+        <br><h3 style="color: ##563d7c"><i><b>Docentes</b></i></h3><br>
         <th scope="col">Alumno</th>
         <th scope="col"></th>
         <th scope="col"></th>
-         <!-- <th scope="col">Editar</th>
-        <th scope="col">Eliminar</th> -->
-        <th scope="col">Unidad I</th>
-        <th scope="col">Unidad II</th>
-        <th scope="col">Unidad III</th> 
-        <th scope="col">Unidad IV</th>
-        <th scope="col">Unidad V</th>
-        <th scope="col">Promedio</th>
+         <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody>
-    	 <?php
+       <?php
               while ($fila=mysqli_fetch_assoc($datos))
               {
           ?>
-
                   <tr>
                       <td scope="col"><?php echo $fila['ap_p']." ".$fila['ap_m']." ".$fila['nombre'] ?></td>
                       <td scope="col"></td>
                       <td scope="col"></td>
-                      <td scope="col"><?php echo $fila['calificacion'] ?></td>
-<<<<<<< HEAD
-                     
-                      
-                            
-=======
-                      <td scope="col"></td>
-                      <td scope="col"></td>
-                      <td scope="col"></td>
-                      <td scope="col"></td>
-                      <td scope="col"></td>
->>>>>>> fb1227da0f6c9420e06e4f458d6cb7aa28c95b3f
+                      <!-- <td><?php echo $row[0]?></td> -->
+                      <!-- <td><?php echo $row[2]?></td>
+                      <td><?php echo $row[3]?></td>
+                      <td><?php echo $row[1]?></td> -->
+                      <!-- <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td> -->
+                      <th scope="col"><button class="btn btn-success editar" id="<?php echo $fila['id_usuario'] ?>" href="<?php echo URL ?>registro">Editar</button> </th>          
+                      <th scope="col"><a class="btn btn-danger" href="<?php echo URL ?>docente/eliminar/<?php echo $fila['id_usuario'] ?>">Eliminar</button> </th>
+                      <!-- <td><a clas="" style="color: red" href="#">Eliminar</a></td>           -->
                   </tr>
-         <?php
+          <?php
               }
           ?>
           
@@ -86,7 +69,7 @@
       </div>
     </div>
   </div> -->
-<!-- 
+
   <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -107,12 +90,28 @@
       </div>
     </div>
   </div>
-</div>-->
+</div>
+<!-- <script type="text/javascript">
+  $(document).ready(function(){
+    $(".editar").click(function(){
+      var id=$(this).attr('id');
+      $.post("<?php echo URL ?>ver/get/"+id,{},function(data){
+        if(data){
+          data=JSON.parse(data)
+          $("#nombre").val(data['nombre'])
+          $("#app").val(data['ap_p'])
+          $("#apm").val(data['ap_m'])
+          $("#myModal").modal('show');
+        }
+      })
+    })
+  })
+</script> -->
 <script type="text/javascript">
   $(document).ready(function(){
-    $(".pdf").click(function(){
+    $(".editar").click(function(){
     // window.open("<?php echo URL?>rmateria/printmateria");
-    window.location.href="<?php echo URL?>rmateria/printmateria";    
+    window.location.href="<?php echo URL?>docente/editar";    
     })
   })
 </script>
