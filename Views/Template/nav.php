@@ -7,6 +7,12 @@ session_start();
   text-align: right;
   color: #fff;
 }
+.salir{
+ 
+  padding-right: 2ex;
+  color: #000;
+}
+
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,15 +23,14 @@ session_start();
 
 <?php
 
-
-
     if(isset($_SESSION['id_usuario']))
     {
         if (isset($_SESSION['id_tipo_usuario']) AND $_SESSION['id_tipo_usuario']== 1)
         {
+          echo "Bienvenido ";
         echo $_SESSION['nombre'];
         ?>
-
+<form id="alumno">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
@@ -34,11 +39,10 @@ session_start();
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo URL?>ver">Ver</a>
-<<<<<<< HEAD
             <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar</a>
           </div>
         </li>
-
+</form>
 <?php
       }
       else
@@ -47,21 +51,19 @@ session_start();
 echo $_SESSION['nombre'];
 ?>
 
-
+<form id="docente">
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="<?php echo URL?>Login" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i>Calificaciones
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-=======
             <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a>
             <a class="dropdown-item" href="<?php echo URL?>docente">Mostrar Docentes</a>
->>>>>>> fb1227da0f6c9420e06e4f458d6cb7aa28c95b3f
             <a class="dropdown-item" href="<?php echo URL?>acentar">Acentar</a>
             <a class="dropdown-item" href="<?php echo URL?>modificar">Modificar</i></a>
           </div>
         </li>
-        
+    </form>   
         
  <?php
       }
@@ -71,6 +73,7 @@ echo $_SESSION['nombre'];
       echo $_SESSION['nombre'];
       ?>
 
+<form id="jefe">
 
  <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -90,7 +93,7 @@ echo $_SESSION['nombre'];
               <a class="dropdown-item" href="<?php echo URL?>raprobacion">Aprobacion</i></a>
             </div>
           </li>
-
+</form>
     <?php }
       }
       ?>
@@ -102,9 +105,11 @@ echo $_SESSION['nombre'];
 <?php if (isset($_SESSION['id_tipo_usuario']))
 {
 ?>
+<div class="salir">
     <form class="form-inline my-2 my-lg-0" style="margin-left:1em;">
-      <a class="btn btn-outline-danger" href="<?php echo URL; ?>Login/logout">Salir</a>
+      <a class="btn btn-outline-danger salir" href="<?php echo URL; ?>Login/logout">Salir</a>
     </form>
+    </div>
 <?php
 }
 else

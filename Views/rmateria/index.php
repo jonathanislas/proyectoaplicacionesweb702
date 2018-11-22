@@ -39,17 +39,12 @@
                       <td scope="col"></td>
                       <td scope="col"></td>
                       <td scope="col"><?php echo $fila['calificacion'] ?></td>
-<<<<<<< HEAD
-                     
-                      
-                            
-=======
+
                       <td scope="col"></td>
                       <td scope="col"></td>
                       <td scope="col"></td>
                       <td scope="col"></td>
                       <td scope="col"></td>
->>>>>>> fb1227da0f6c9420e06e4f458d6cb7aa28c95b3f
                   </tr>
          <?php
               }
@@ -57,57 +52,7 @@
           
     </tbody>
   </table>
-  <!-- <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Editando</h4>
-          <button type="button" class="close" data-dismiss="modal">&times</button>
-        </div>
-        <div class="modal-body">
-          <form class="form-signin" action="" method="post">
-            <div class="form-group">
-              <input type="text" class="form-control" id="nombre" nombre="nombre"></input>
-              <label for="nombre">Nombre</label>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="app" nombre="ap_p"></input>
-              <label for="nombre">Apellido Paterno</label>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="apm" nombre="ap_m"></imput>
-              <label for="nombre">Apellido Materno</label>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-succes" data-dismiss="modal">Actualizar</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-<!-- 
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Editando</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body contenido">
-          <form class="form-signin" action="" method="post">
-            <input type="text" class="form-control" id="nombre"></input>
-            <input type="text" class="form-control" id="app"></input>
-            <input type="text" class="form-control" id="apm"></input>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>-->
+
 <script type="text/javascript">
   $(document).ready(function(){
     $(".pdf").click(function(){
@@ -115,4 +60,5 @@
     window.location.href="<?php echo URL?>rmateria/printmateria";    
     })
   })
+
 </script>
