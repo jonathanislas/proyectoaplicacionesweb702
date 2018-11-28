@@ -97,7 +97,7 @@
   $(document).ready(function(){
     $(".pdf").click(function(){
     // window.open("<?php echo URL?>rmateria/printmateria");
-    window.location.href="<?php echo URL?>rgrupo/printgrupo";    
+    window.location.href="<?php echo URL?>rgrupo/print";    
     })
   })
 </script>

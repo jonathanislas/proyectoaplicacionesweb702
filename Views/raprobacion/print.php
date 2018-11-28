@@ -69,7 +69,7 @@ while($fila= mysqli_fetch_assoc($datos[5])){
 
 
 
-$pdf->Output("F","reporte.pdf");
+$pdf->Output("F","Reporte de Aprobacion.pdf");
 ob_end_flush();
 
 

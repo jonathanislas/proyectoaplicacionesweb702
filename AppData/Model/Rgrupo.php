@@ -20,4 +20,10 @@ class Rgrupo{
 		$datos=$this->conexion->QueryResultado($sql);
 		return $datos;
 	}
+	public function getGrupo2()
+	{
+		$sql="SELECT grupos.desc_grupo, semestre.descripcion FROM grupos, semestre WHERE grupos.id_semestre=semestre.id_semestre";
+		$datos=$this->conexion->QueryResultado($sql);
+		return $datos;
+	}
 }

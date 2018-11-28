@@ -13,8 +13,8 @@ class rgrupoController
 		return $datos;
 
 	}
-	function printgrupo(){
-		$datos=$this->rgrupo->getGrupo();
+	function print(){
+		$datos=$this->rgrupo->getGrupo2();
 		// $datos[1]=$this->rmateria->getcali();
 		return $datos;
 		

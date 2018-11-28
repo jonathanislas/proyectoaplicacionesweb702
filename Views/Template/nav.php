@@ -27,7 +27,7 @@ session_start();
     {
         if (isset($_SESSION['id_tipo_usuario']) AND $_SESSION['id_tipo_usuario']== 1)
         {
-          echo "Bienvenido ";
+          // echo "Bienvenido ";
         echo $_SESSION['nombre'];
         ?>
 <form id="alumno">
@@ -95,7 +95,7 @@ echo $_SESSION['nombre'];
 
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="<?php echo URL?>Login" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i>Calificaciones
+            <i>Comunidad
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a>
@@ -109,7 +109,8 @@ echo $_SESSION['nombre'];
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="<?php echo URL?>rmateria">Materia</a>
               <a class="dropdown-item" href="<?php echo URL?>rgrupo">Grupo</a>
-              <a class="dropdown-item" href="<?php echo URL?>raprobacion">Aprobacion</i></a>
+              <a class="dropdown-item" href="<?php echo URL?>raprobacion">Aprobacion</a>
+              <a class="dropdown-item" href="<?php echo URL?>reprobacion">Reprobacion</i></a>
             </div>
           </li>
 </form>

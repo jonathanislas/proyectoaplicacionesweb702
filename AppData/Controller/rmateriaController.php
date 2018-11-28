@@ -11,7 +11,7 @@ class rmateriaController{
 		// $datos[1]=$this->rmateria->getmat();
 		return $datos;
 	}
-	function printmateria(){
+	function print(){
 		$datos[0]=$this->rmateria->getmateria();
 		$datos[1]=$this->rmateria->getgrupo();
 		$datos[2]=$this->rmateria->getmaestro();

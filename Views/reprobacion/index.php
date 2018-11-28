@@ -106,7 +106,7 @@
   $(document).ready(function(){
     $(".pdf").click(function(){
     // window.open("<?php echo URL?>rmateria/printmateria");
-    window.location.href="<?php echo URL?>raprobacion/print";    
+    window.location.href="<?php echo URL?>reprobacion/print";    
     })
   })
 </script>
