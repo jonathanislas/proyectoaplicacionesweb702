@@ -9,13 +9,15 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo URL ?>css/bootstrap.min.css" rel="stylesheet">
-           
+
+    <script type="text/javascript" src="<?php echo URL ?>js/bootstrap.bundle.min.js"></script>       
+    <script type="text/javascript" src="<?php echo URL ?>js/bootstrap.min.js"></script>       
     <script type="text/javascript" src="<?php echo URL ?>js/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo URL ?>Public/js/popper.min.js"></script>
+    <script type="text/javascript" src="<?php echo URL ?>js/popper.min.js"></script>
     <script type="text/javascript" src="<?php echo URL ?>js/bootstrap.js"></script>
-    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
     <script type="text/javascript" src="<?php echo URL ?>js/jquery.validate.min.js"></script>
-    <script src="<?php echo URL ?>js/modal.js" type="text/javascript"></script>
+    <script type="text/javascript" src="<?php echo URL ?>js/modal.js" ></script>
 
     <link rel="stylesheet" href="<?php echo URL ?>css/sweetalert2.min.css">
 
