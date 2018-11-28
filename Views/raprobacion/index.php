@@ -3,8 +3,7 @@
     <div class="col-">
       <br><h3 align="center" style="color: ##563d7c"><i><b>Aplicaciones Web</b></i></h3><br>
     </div>
-    <div class="col-"></div>
-    <div class="col-">
+    <div class="col-md-4 offset-md-4">
       <br><button type="button" class="btn btn-info pdf"><i><b>Generar PDF</b></i></button>
     </div>
   </div>

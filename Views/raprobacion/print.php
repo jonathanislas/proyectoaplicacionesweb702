@@ -50,18 +50,19 @@ $pdf->Ln();
 $pdf->SetFont("Arial","",10);
 $pdf->Cell(10,7,"No.",1,0);
 $pdf->Cell(70,7,"Alumno",1,0,'C');
-while($fila= mysqli_fetch_assoc($datos[3])){
-    $largo=110/($fila['no_unidades']+1);
-    for($i=0;$i<$fila['no_unidades'];$i++){
-        $pdf->Cell($largo,7,"Unidad".($i+1),1,0,'C');
-    }
-}
+$pdf->Cell(110,7,"Promedio",1,0,'C');
+// while($fila= mysqli_fetch_assoc($datos[3])){
+//     $largo=110/($fila['no_unidades']+1);
+//     for($i=0;$i<$fila['no_unidades'];$i++){
+//         $pdf->Cell($largo,7,"Unidad".($i+1),1,0,'C');
+//     }
+// }
 $pdf->Ln();
 $d=0;
 while($fila= mysqli_fetch_assoc($datos[5])){
     $pdf->cell(15,10,($d+1));       
     
-    $pdf->Cell(70,10,$fila['ap_p']." ".$fila['ap_m']." ".$fila['nombre']);//."   ".$fila['calificacion']);
+    $pdf->Cell(115,10,$fila['ap_p']." ".$fila['ap_m']." ".$fila['nombre']);//."   ".$fila['calificacion']);
     $pdf->Cell(10,10,$fila['calificacion']);
     $pdf->Ln();
     $d++;

@@ -22,7 +22,7 @@
           <td scope="col"></td>
           <td scope="col"></td>
           <th scope="col"><button class="btn btn-success editar" id="<?php echo $fila['id_usuario'] ?>">Editar</button> </th>
-          <th scope="col"><a class="" href="<?php echo URL ?>mostrar/eliminar/<?php echo $fila['id_usuario'] ?>">Eliminar</button> </th>
+          <th scope="col"><a class="btn btn-danger" href="<?php echo URL ?>mostrar/eliminar/<?php echo $fila['id_usuario'] ?>">Eliminar</button> </th>
         </tr>
         <?php } ?>
       </tbody>
