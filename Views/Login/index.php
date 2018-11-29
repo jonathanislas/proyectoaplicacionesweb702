@@ -7,15 +7,15 @@
 		<div class="col"></div>
 		<div class="col">		
 		  <div class="form-group row">
-		    <label for="inputEmail3" class="col-sm-2 col-form-label">Nickname</label>
-		    <div class="col-sm-10">
-		      <input name="usuario" type="text" class="form-control" id="usuario" placeholder="Nickname">
+		    <label for="inputEmail3" class="col-sm-2 col-form-label">Usuario</label>
+		    <div class="col-sm-11">
+		      <input name="usuario" type="text" class="form-control" id="usuario" placeholder="Ingrese Usuario">
 		    </div>
 		  </div>
 		  <div class="form-group row">
-		    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-		    <div class="col-sm-10">
-		      <input name="contraseña" type="password" class="form-control" id="contraseña" placeholder="Password">
+		    <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
+		    <div class="col-sm-11">
+		      <input name="contraseña" type="password" class="form-control" id="contraseña" placeholder="Ingrese Constraseña">
 		    </div>
 		  </div>
 		  <fieldset class="form-group">

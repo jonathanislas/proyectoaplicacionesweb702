@@ -4,8 +4,10 @@
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
-        <br><h3 style="color: ##563d7c"><i><b>Docentes</b></i></h3><br>
-        <th scope="col">Alumno</th>
+          <br><h3 style="color: ##563d7c"><i><b>Docentes</b></i><div class="col-md-9 offset-md-9">
+  <a class="btn btn-success" href="<?php echo URL ?>registrar">Registrar</i></a>
+  </div></h3><br>
+        <th scope="col">Nombre Docente</th>
         <th scope="col"></th>
         <th scope="col"></th>
          <th scope="col">Editar</th>

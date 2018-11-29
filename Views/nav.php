@@ -57,7 +57,7 @@ echo $_SESSION['nombre'];
             <i>Calificaciones
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="<?php echo URL?>ver">Mostrar</a>
+            <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a>
             <a class="dropdown-item" href="<?php echo URL?>acentar">Acentar</a>
             <a class="dropdown-item" href="<?php echo URL?>modificar">Modificar</i></a>
           </div>
@@ -72,7 +72,7 @@ echo $_SESSION['nombre'];
       echo $_SESSION['nombre'];
       ?>
 
-<!-- <form id="jefe">
+<form id="jefe">
 
 <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="<?php echo URL?>Login" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -113,53 +113,7 @@ echo $_SESSION['nombre'];
               <a class="dropdown-item" href="<?php echo URL?>reprobacion">Reprobacion</i></a>
             </div>
           </li>
-</form> -->
-<form id="jefe">
-            <li class="nav-item dropdown">
-                <a class="nav-link   " data-toggle="dropdown" href="#" id="dropdown01" role="button" aria-haspopup="true" aria-expanded="false">Calificaciones</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="<?php echo URL; ?>ver">Mostrar</a>
-                </div>
-
-            </li>
 </form>
-
-<form id="jefe">
-
-            <li class="nav-item dropdown">
-                <a class="nav-link "  data-toggle="dropdown" href="#" id="dropdown03" role="button" aria-haspopup="true" aria-expanded="false">Materia</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown03">
-                    <a class="dropdown-item" href="<?php echo URL?>asignarmateria">Asignar</i></a>               
-                   </div>
-            </li>
-</form>
-
-<form id="jefe">
-
-            <li class="nav-item dropdown">
-                <a class="nav-link "  data-toggle="dropdown" href="#" id="dropdown03" role="button" aria-haspopup="true" aria-expanded="false">Comunidad</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown03">
-                    <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a>
-            <a class="dropdown-item" href="<?php echo URL?>docente">Mostrar Docentes</a>               
-                   </div>
-            </li>
-</form>
-
-<form id="jefe">
-
-            <li class="nav-item dropdown">
-                <a class="nav-link "  data-toggle="dropdown" href="#" id="dropdown03" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown03">
-                       <a class="dropdown-item" href="<?php echo URL?>rmateria">Materia</a>
-              <a class="dropdown-item" href="<?php echo URL?>rgrupo">Grupo</a>
-              <a class="dropdown-item" href="<?php echo URL?>raprobacion">Aprobacion</a>
-             <a class="dropdown-item" href="<?php echo URL?>reprobacion">Reprobacion</i></a> 
-            <!--  <a class="dropdown-item" href="<?php echo URL?>mostrar">Mostrar Alumnos</a> -->
-            <!-- <a class="dropdown-item" href="<?php echo URL?>docente">Mostrar Docentes</a>                -->
-                   </div>
-            </li>
-</form>
-
     <?php }
       }
       ?>
@@ -185,7 +139,7 @@ else
   <div class="login">
      <li class="nav-item dropdown">
         <a class="nav-limk" href="<?php echo URL ?>login"><i>Inicia Sesion</a>
-        <!-- <a class="nav-limk" href="<?php echo URL ?>registrar">Registrar</i></a> -->
+        <a class="nav-limk" href="<?php echo URL ?>registrar">Registrar</i></a>
       </li>
   </div>
 <?php
@@ -193,3 +147,58 @@ else
 ?>
 
 </nav>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Calificaciones</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <span><?php if(isset($_SESSION['id_tipo_usuario'])) echo $_SESSION['id_tipo_usuario']; ?></span>
+      <?php if(isset($_SESSION['id_tipo_usuario']) and ($_SESSION['id_tipo_usuario']==1 or $_SESSION['id_tipo_usuario']==2)){ ?>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="<?php echo "Home"; ?>" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Calificaciones
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?php echo "ver"; ?>">Ver</a>
+            <?php if($_SESSION['id_tipo_usuario']==2){ ?>
+            <a class="dropdown-item" href="<?php echo "acentar"; ?>">Acentar</a>
+            <a class="dropdown-item" href="<?php echo "modificar"; ?>">Modificar</a>
+            <?php } ?>
+          </div>
+        </li>
+      <?php } ?>
+        <?php if(isset($_SESSION['id_tipo_usuario']) and ($_SESSION['id_tipo_usuario']==3)){ ?>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Materia
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="<?php echo "asignarmateria"; ?>">Asignar</a>
+            </div>
+          </li>
+          <?php } ?>
+        <?php if(isset($_SESSION['id_tipo_usuario']) and ($_SESSION['id_tipo_usuario']==2 or $_SESSION['id_tipo_usuario']==3)){ ?>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Reportes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="<?php echo "rmateria"; ?>">Materia</a>
+              <a class="dropdown-item" href="<?php echo "rgrupo"; ?>">Grupo</a>
+              <a class="dropdown-item" href="<?php echo "raprobacion"; ?>">Aprobacion</a>
+            </div>
+          </li>
+        <?php } ?>
+    </ul>
+  </div>
+  <div class="login">
+     <li class="nav-item dropdown">
+        <a class="nav-limk" href="<?php echo "login"; ?>">Inicia Sesion</a>
+        <a class="nav-limk" href="<?php echo "registrar"; ?>">Registrar</a>
+      </li>
+  </div>
+</nav> -->

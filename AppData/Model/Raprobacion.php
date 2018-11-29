@@ -36,17 +36,20 @@ class Raprobacion{
 		return $datos;
 	}
 	public function getmateria(){
-		$sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=2";
+		// $sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=2";
+		$sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a, usuario u WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=u.id_usuario AND u.id_tipo_usuario=2";
 		$datos=$this->conexion->QueryResultado($sql);
 		return $datos;
 	}
 	public function getgrupo(){
-		$sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=2";
+		// $sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=2";
+		$sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a, usuario u WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=u.id_usuario AND u.id_tipo_usuario=2";
 		$datos=$this->conexion->QueryResultado($sql);
 		return $datos;
 	}
 	public function getmaestro(){
-		$sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=2";
+		// $sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=2";
+		$sql="SELECT p.nombre, p.ap_p, p.ap_m, m.desc_materia, g.desc_grupo FROM persona p, materias m, grupos g, asigna_mat a, usuario u WHERE p.id_persona=a.id_persona AND m.id_materia=a.id_materia AND g.id_grupo=a.id_grupo AND p.id_usuario=u.id_usuario AND u.id_tipo_usuario=2";
 		$datos=$this->conexion->QueryResultado($sql);
 		return $datos;
 	}

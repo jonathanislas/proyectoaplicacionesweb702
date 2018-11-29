@@ -76,7 +76,7 @@
                 </div>
 
                  </div>
-              <input type="submit" value="Guardar" class="btn">
+              <input type="submit" value="Guardar" class="btn btn-success">
 
             </form>
           </div>

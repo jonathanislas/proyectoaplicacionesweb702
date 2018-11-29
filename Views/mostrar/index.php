@@ -1,17 +1,25 @@
-<div class="container">
-  <?php
-  if(mysqli_num_rows($datos)>0){
-  ?>
-  <h3>Aplicaciones Web 702</h3>
-    <table class="table table-striped">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Nombre del alumno</th>
+<div class="container"><!-- <?php
+    // if(mysqli_num_rows($datos)>0){
+  ?> -->
+  <!-- <div class="row">
+    <div class="col-md-2">
+      <br><h3 align="center" style="color: ##563d7c"><i><b>Alumnos</b></i></h3><br>
+    </div>
+    <div class="col-md-5 offset-md-5">
+      <br><button type="button" class="btn btn-success" href="<?php echo URL ?>registrar"><i><b>Regisrar</b></i></button>
+    </div>
+  </div> -->
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <br><h3 style="color: ##563d7c"><i><b>Alumnos</b></i><div class="col-md-9 offset-md-9">
+  <a class="btn btn-success" href="<?php echo URL ?>registrar">Registrar</i></a>
+  </div></h3><br>
+          <th scope="col">Nombre Alumno</th>
           <th scope="col"></th>
           <th scope="col"></th>
           <th scope="col">Editar</th>
           <th scope="col">Eliminar</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -24,13 +32,12 @@
           <th scope="col"><button class="btn btn-success editar" id="<?php echo $fila['id_usuario'] ?>">Editar</button> </th>
           <th scope="col"><a class="btn btn-danger" href="<?php echo URL ?>mostrar/eliminar/<?php echo $fila['id_usuario'] ?>">Eliminar</button> </th>
         </tr>
-        <?php } ?>
-      </tbody>
-    </table>
-    <?php
-  } else { ?>
-    <h2>No se encuentra ningun dato</h2>
-  <?php } ?>
+          <?php
+              }
+          ?>
+          
+    </tbody>
+  </table>
 </div>
 <div id="editar" class="modal fade" role="dialog">
   <div class="modal-dialog">
